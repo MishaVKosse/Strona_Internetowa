@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addiction</title>
+</head>
+<head>
+    <title>Przydatna informacja!</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div class="div-1"></div>
+    <center><h1>Zależność od technologii</h1>
+      <a href = "{{ url_for('hello_world') }}">menu</a>
+      <a href = "{{ url_for('moneta') }}">moneta</a>
+    <p>To tylko akapit tekstu.</p>
+    <h2>A to jest nieco mniejszy nagłówek.</h2>
+             <ul>
+                   <li>To jest element listy wypunktowanej (pierwszy)</li>
+                   <li>a to jest drugi element.</li>
+             </ul>
+    </center>
+              {% for i in imagelist %}
+              <img src = "{{ url_for('static', filename=i)}}">
+              {% endfor %}
+              <img src = "{{ url_for('static', filename=imagelist[0]) }}">
+</body>
+
+<!-- .vert-move {
+  
+  animation: mover 1s infinite  alternate;
+}  
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-40px); }
+} -->
+</html>
